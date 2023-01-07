@@ -382,6 +382,76 @@
             <use href="images/icons/icons.svg#icon-close"></use>
           </svg>
         </button>
+        <form class="registration-form" name="registration_form">
+          <strong class="registration-form-appeal">Leave your contacts and we will call you back</strong>
+          <div class="registration-form-group" role="group">
+            <label class="registration-form-field">
+              <span class="registration-form-label">Name</span>
+              <input
+                class="registration-form-input"
+                type="text"
+                name="user_name"
+                required
+                minlength="3"
+                placeholder="&nbsp;"
+              />
+              <svg class="icon-registration" width="12" height="12">
+                <use href="images/icons/icons.svg#icon-form-name"></use>
+              </svg>
+            </label>
+
+            <label class="registration-form-field">
+              <span class="registration-form-label">Phone</span>
+              <input
+                class="registration-form-input"
+                type="phone"
+                name="user_phone"
+                required
+                minlength="3"
+                placeholder="&nbsp;"
+              />
+              <svg class="icon-registration" width="13" height="13">
+                <use href="images/icons/icons.svg#icon-form-phone"></use>
+              </svg>
+            </label>
+
+            <label class="registration-form-field">
+              <span class="registration-form-label">Email</span>
+              <input
+                class="registration-form-input"
+                type="email"
+                name="user_email"
+                required
+                minlength="6"
+                placeholder="&nbsp;"
+              />
+              <svg class="icon-registration" width="15" height="12">
+                <use href="images/icons/icons.svg#icon-form-email"></use>
+              </svg>
+            </label>
+
+            <label class="registration-textarea">
+              <span class="registration-form-label">Comment</span>
+              <textarea
+                class="registration-form-message"
+                name="user_message"
+                rows="7"
+                placeholder="Text input"
+              ></textarea>
+            </label>
+          </div>
+          <label class="registration-form-agreement">
+            <input class="registration-form-checkbox" type="checkbox" name="user_agreement" />
+            <span class="registration-form-text">
+              <svg>
+                <use href="images/icons/icons.svg#checkbox-icon" width="10px" height="8px"></use>
+              </svg>
+              I accept the terms and conditions of the
+              <a class="registration-form-link" href="#">Privacy Policy</a>
+            </span>
+          </label>
+          <button type="submit">Send</button>
+        </form>
       </div>
     </div>
     <script src="js/modal.js"></script>
