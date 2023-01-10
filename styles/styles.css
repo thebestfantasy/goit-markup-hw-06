@@ -192,7 +192,7 @@ body {
   letter-spacing: 0.04em;
   color: var(--color-main-white);
   padding: 16px 32px;
-  transition: box-shadow var(--transiton-fast);
+  transition: background-color var(--transiton-fast), box-shadow var(--transiton-fast);
   cursor: pointer;
 }
 
@@ -418,21 +418,23 @@ body {
 
 .footer-box {
   display: flex;
+  position: relative;
 }
 
 .footer-left {
   display: block;
 }
 
-.footer-right {
+.footer-mid {
   display: block;
   margin-left: 120px;
   width: 208px;
   height: 80px;
 }
 
+.footer-mid p,
 .footer-right p {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -471,6 +473,66 @@ body {
 .icon-footer:hover,
 .icon-footer:focus {
   background-color: #31d0aa;
+}
+
+.footer-right {
+  display: flex;
+  margin-left: 80px;
+}
+
+.footer-input {
+  width: 264px;
+  height: 40px;
+  margin-top: 16px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: inherit;
+  padding: 8px 16px;
+  color: var(--color-main-white);
+}
+
+.footer-input::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-btn {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-accent);
+  width: 168px;
+  height: 40px;
+  border-radius: 4px;
+  margin-left: 24px;
+  margin-right: 0;
+  margin-top: 40px;
+  border-color: transparent;
+  cursor: pointer;
+  transition: background-color var(--transiton-fast);
+}
+
+.subscribe {
+  margin-left: 24px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-main-white);
+  letter-spacing: 0.04em;
+}
+
+.footer-send {
+  width: 24px;
+  height: 20px;
+  margin-left: 16px;
+  fill: var(--color-main-white);
+}
+
+.footer-btn:focus,
+.footer-btn:hover {
+  background-color: #404bbf;
 }
 
 /* ---------------------PORTFOLIO -------------*/
@@ -706,14 +768,6 @@ label {
   transition: outline var(--transiton-fast);
 }
 
-/* .registration-form-input:not(:placeholder-shown):required:valid {
-  outline: 1px solid greenyellow;
-}
-
-.registration-form-input:not(:placeholder-shown):required:invalid {
-  outline: 1px solid red;
-} */
-
 .registration-form-input:focus {
   outline: 1px solid var(--color-accent);
   outline-offset: -1px;
@@ -734,11 +788,6 @@ label {
   width: 100%;
   outline: transparent;
 }
-
-/* .registration-form-field:focus-within .registration-form-message {
-  outline: 1px solid var(--color-accent);
-  outline-offset: -1px;
-} */
 
 .registration-textarea {
   margin-bottom: 16px;
@@ -771,17 +820,44 @@ textarea:focus {
 .registration-form-agreement {
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .registration-form-checkbox {
-  appearance: none;
+  position: absolute;
   width: 16px;
   height: 16px;
   border: 1.25px solid var(--color-main);
   border-radius: 2px;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
-.registration-form-text {
+.agreement-checkbox {
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+
+.agreement-icon {
+  fill: var(--color-main-white);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 10px;
+  height: 8px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.registration-form-checkbox:checked + .agreement-checkbox {
+  background-color: var(--color-accent);
+  border-color: transparent;
+  border-radius: 2px;
+}
+
+.registration-accept-text {
   padding-left: 24px;
   font-weight: 400;
   font-size: 12px;
@@ -791,8 +867,39 @@ textarea:focus {
   padding-left: 8px;
 }
 
-.registration-form-checkbox:checked {
-  background-image: ;
-  background-repeat: no-repeat;
-  background-position: center;
+.registration-accept-link {
+  color: rgba(77, 90, 229, 1);
+}
+
+.form-send {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.form-send-btn {
+  width: 169px;
+  height: 56px;
+  color: var(--color-main-white);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  background-color: var(--color-accent);
+  border-radius: 4px;
+  border-color: transparent;
+  transition: background-color var(--transiton-fast), box-shadow var(--transiton-fast);
+  cursor: pointer;
+}
+
+.form-send-btn:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  background-color: var(--color-accent-hover);
+}
+
+.form-send-btn:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  background-color: var(--color-accent-hover);
 }
