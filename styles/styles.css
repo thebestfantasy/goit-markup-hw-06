@@ -432,8 +432,7 @@ body {
   height: 80px;
 }
 
-.footer-mid p,
-.footer-right p {
+.footer-mid p {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -516,6 +515,14 @@ body {
 
 .subscribe {
   margin-left: 24px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-main-white);
+  letter-spacing: 0.04em;
+}
+
+.footer-mail-title {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
